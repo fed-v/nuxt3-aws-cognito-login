@@ -1,0 +1,266 @@
+//////////////////////////////////////////////////////
+///     Colors
+//////////////////////////////////////////////////////
+
+
+@white: #ffffff;
+
+/* GREYS */
+@grey-1: #fafafa;
+@grey-2: #f5f5f5;
+@grey-3: #f0f0f0;
+@grey-4: #ebebeb;
+@grey-5: #e0e0e0;
+@grey-6: #d1d1d1;
+@grey-7: #8c8c8c;
+@grey-8: #707070;
+@grey-9: #545454;
+@grey-10: #171717;
+
+/* PRIMARY */
+@primary-1: #f7fbff;
+@primary-2: #edf5ff;
+@primary-3: #e8f2ff;
+@primary-4: #deedff;
+@primary-5: #c9e2ff;
+@primary-5: #b2d5ff;
+@primary-7: #2b8bff;
+@primary-8: #0069e8;
+@primary-9: #004ead;
+@primary-10: #001733;
+
+/* ERROR */
+@error-1: #fffafa;
+@error-2: #fff2f2;
+@error-3: #ffeded;
+@error-4: #ffe5e5;
+@error-5: #ffd6d6;
+@error-6: #ffc2c2;
+@error-7: #ff4747;
+@error-8: #e00000;
+@error-9: #ab0000;
+@error-10: #380000;
+
+/* WARNING */
+@warning-1: #fffaf0;
+@warning-2: #fff4de;
+@warning-3: #ffefcf;
+@warning-3: #ffe9bd;
+@warning-5: #ffdb94;
+@warning-6: #ffc95e;
+@warning-7: #bd7e00;
+@warning-8: #966400;
+@warning-9: #734c00;
+@warning-10: #1f1400;
+
+/* WARNING */
+@success-1: #f2fcf8;
+@success-2: #e3faef;
+@success-3: #dcf7ea;
+@success-4: #d3f2e3;
+@success-6: #9be0be;
+@success-5: #b9ebd2;
+@success-7: #00a150;
+@success-8: #008040;
+@success-9: #006130;
+@success-10: #001a0d;
+
+/* INFO */
+@info-1: #f7fbfc;
+@info-4: #e1edf2;
+@info-3: #e9f1f5;
+@info-2: #f0f5f7;
+@info-5: #cee3ed;
+@info-6: #b9d6e4;
+@info-7: #6592a8;
+@info-8: #4c758a;
+@info-9: #2f576b;
+@info-10: #0a1820;
+  
+  
+  
+
+
+
+//////////////////////////////////////////////////////
+///     Z-Index Scale 
+//////////////////////////////////////////////////////
+@zIndex-1: 100;
+@zIndex-2: 200;
+@zIndex-3: 300;
+@zIndex-4: 400;
+@zIndex-5: 500;
+@zIndex-6: 600;
+@zIndex-7: 700;
+@zIndex-8: 800;
+@zIndex-9: 900;
+@zIndex-10: 1000;
+
+
+
+//////////////////////////////////////////////////////
+///     Media Queries
+//////////////////////////////////////////////////////
+
+// breakpoints based on device view
+@bp-portrait: 479px;
+@bp-landscape: 767px;
+@bp-desktop: 992px;
+
+// this is how big the page must be to reach the maximum content width
+// basically math to determine at what size the max page width is the desired content percent of the page.
+@bp-oversized: @max-page-width/(@content-width/100);
+@max-page-width: 1400px;
+
+// useful page values
+@max-page-width: 1400px;
+@content-width: 87.5%;
+
+// need to use vw here because 100% doesnt calculate properly
+//@content-gutter: unit((100%-@content-width)/2, vw);
+
+// everything as big or bigger than tablet-min (or tablet) sized in portrait view
+@mq-tablet-portrait: ~"only screen and (min-width: "@bp-portrait~")";
+
+// everything as big or bigger than tablet-min (or tablet) sized in landscape view
+@mq-tablet-landscape: ~"only screen and (min-width: "@bp-landscape~")";
+
+// everything as big or bigger than desktop-min or laptop-min sized
+@mq-desktop: ~"only screen and (min-width: "@bp-desktop~")";
+@mq-oversized: ~"only screen and (min-width: "@bp-oversized~")";
+
+
+
+//////////////////////////////////////////////////////
+///     Columns and Gutters
+//////////////////////////////////////////////////////
+@defaultGutter: 32px;
+@portraitGutter: 40px;
+@landscapeGutter: 56px;
+@desktopGutter: 64px;
+
+
+
+//////////////////////////////////////////////////////
+///     Miscellaneous
+//////////////////////////////////////////////////////
+// Image directory
+@imgDir: '';
+
+
+
+//////////////////////////////////////////////////////
+///     Base UNIT MULTIPLICATION
+//////////////////////////////////////////////////////
+@baseUnit: 8px;
+@halfx: 0.5 * @baseUnit; // 4px
+@1x: 1 * @baseUnit; // 8px
+@2x: 2 * @baseUnit; // 16px
+@3x: 3 * @baseUnit; // 24px
+@4x: 4 * @baseUnit; // 32px
+@5x: 5 * @baseUnit; // 40px
+@6x: 6 * @baseUnit; // 48px
+@7x: 7 * @baseUnit; // 56px
+@8x: 8 * @baseUnit;
+@9x: 9 * @baseUnit;
+@10x: 10 * @baseUnit;
+@11x: 11 * @baseUnit;
+@12x: 12 * @baseUnit;
+@13x: 13 * @baseUnit;
+@14x: 14 * @baseUnit;
+@15x: 15 * @baseUnit;
+@16x: 16 * @baseUnit;
+@17x: 17 * @baseUnit;
+@18x: 18 * @baseUnit;
+@19x: 19 * @baseUnit;
+@20x: 20 * @baseUnit;
+@23x: 23 * @baseUnit;
+@25x: 25 * @baseUnit;
+@33x: 33 * @baseUnit;
+
+
+
+//////////////////////////////////////////////////////
+///     spacing rules
+//////////////////////////////////////////////////////
+/**
+ * to use
+ * body {
+ *   .sp10(margin);
+ * }
+ */
+.sp1(@rule) {
+    @{rule}: @halfx;
+}
+.sp2(@rule) {
+    @{rule}: @1x;
+}
+.sp3(@rule) {
+    @{rule}: @2x;
+}
+.sp4(@rule) {
+    @{rule}: @3x;
+}
+.sp5(@rule) {
+    @{rule}: @4x;
+    @media @mq-tablet-portrait {
+        @{rule}: @5x;
+    }
+}
+.sp6(@rule) {
+    @{rule}: @6x;
+    @media @mq-tablet-portrait {
+        @{rule}: @7x;
+    }
+    @media @mq-desktop {
+        @{rule}: @8x;
+    }
+}
+.sp7(@rule) {
+    @{rule}: @8x;
+    @media @mq-tablet-portrait {
+        @{rule}: @9x;
+    }
+    @media @mq-tablet-landscape {
+        @{rule}: @10x;
+    }
+    @media @mq-desktop {
+        @{rule}: @11x;
+    }
+}
+.sp8(@rule) {
+    @{rule}: @10x;
+    @media @mq-tablet-portrait {
+        @{rule}: @11x;
+    }
+    @media @mq-tablet-landscape {
+        @{rule}: @13x;
+    }
+    @media @mq-desktop {
+        @{rule}: @15x;
+    }
+}
+.sp9(@rule) {
+    @{rule}: @12x;
+    @media @mq-tablet-portrait {
+        @{rule}: @14x;
+    }
+    @media @mq-tablet-landscape {
+        @{rule}: @16x;
+    }
+    @media @mq-desktop {
+        @{rule}: @19x;
+    }
+}
+.sp10(@rule) {
+    @{rule}: @15x;
+    @media @mq-tablet-portrait {
+        @{rule}: @19x;
+    }
+    @media @mq-tablet-landscape {
+        @{rule}: @25x;
+    }
+    @media @mq-desktop {
+        @{rule}: @33x;
+    }
+}

@@ -1,0 +1,144 @@
+
+
+*:disabled {
+    background: @grey-2;
+    border: 1px solid @grey-6;
+}
+
+
+textarea {
+    resize: none;
+}
+
+
+input[type=checkbox] {
+    zoom: 1.5;
+}
+
+
+.input-container {
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 18px;
+    }
+}
+
+
+.form-input {
+    color: @grey-10;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid @grey-7;
+    padding: 7px;
+    padding: 10px 12px;
+
+    &:active,
+    &:focus {
+        box-shadow: 0px 0px 0px 2px @white, 0px 0px 0px 4px @primary-7;
+        border: 1px solid @grey-7;
+    }
+
+    &.error {
+        box-shadow: none;
+        border: 1px solid @error-8;
+    }
+
+    &.textarea {
+        height: 125px;
+    }
+}
+
+
+.input-label {
+    color: @grey-10;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+.error-msg {
+    color: @error-8;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 8px;
+
+    &::before {
+        content: '';
+        background: url(/assets/images/errorIcon.svg) no-repeat;
+        height: 14px;
+        width: 14px;
+        margin-right: 10px;
+        display: inline-block;
+        top: 2px;
+        position: relative;
+    }
+}
+
+
+
+
+
+
+/* Mobile portrait styles: 479px and down */
+
+.form-section {
+    width: 100%;
+}
+
+.login-form,
+.success-msg {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.form-section header {
+    margin-bottom: 24px;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    font-size: 14px;
+
+    .input-label {
+        font-weight: 400;
+        margin: 0 0 0 19px;
+    }
+
+    div {
+        display: flex;
+    }
+}
+
+
+
+/* Mobile landscape styles: 767px and down */
+@media all and (min-width: @bp-portrait) {
+
+}
+
+/* Tablet styles: 992px and down */
+@media all and (min-width: @bp-landscape) {
+
+    .login-form,
+    .success-msg {
+        width: 60%;
+        margin: auto;
+    }
+
+    .form-section {
+        width: 50%;
+        margin: auto;
+    }
+
+}
+
+ /* Desktop styles: 992px and down */
+ @media all and (min-width: @bp-desktop) {
+   
+}
