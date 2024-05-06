@@ -1,8 +1,13 @@
 <template>
+
     <div>
         <h1>Test</h1>
         <button class="link-btn" @click="signOut">Sign out</button>
+
+        <pre>{{ data }}</pre>
+        
     </div>
+    
 </template>
 
 <script setup>
@@ -12,6 +17,7 @@
     });
 
     import { Auth } from 'aws-amplify';
+
 
     const signOut = async () => {
 
@@ -23,8 +29,14 @@
 
     };
 
+
+    const { data } = await useFetch('api/getUserData', {
+        method: 'post',
+        body: { limit: 5 }
+    });
+
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
 </style>
