@@ -1,6 +1,13 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Cognito login using Amplify
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a simple demo that uses Amplify to create a protected application.
+
+Features include:
+
+* Route guarding
+* Account creation
+* Password reset
+* Server routing
 
 ## Setup
 

@@ -1,11 +1,14 @@
 <template>
 
-    <div>
 
-        <h1>Test</h1>
+    <header class="site-header">
+        <h1>Homepage</h1>
+        <button class="solid-btn" @click="signOut">Sign out</button>
+    </header>
 
-        <button class="link-btn" @click="signOut">Sign out</button>
+    <main class="main-content">
 
+        <h2>User Data</h2>
 
         <table>
             <thead>
@@ -28,7 +31,7 @@
             </tbody>
         </table>
 
-    </div>
+    </main>
 
 </template>
 
@@ -60,7 +63,20 @@
     
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+
+    .site-header {
+        background-color: #eee;
+        border: 1px solid #aaa;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }  
+
+    .main-content {
+        padding: 50px;
+    }
 
     /* Reset default margin and padding */
     body, table {
@@ -74,6 +90,7 @@
         border-collapse: collapse;
         margin-top: 20px;
         font-family: Arial, sans-serif;
+        border: 1px solid #aaa;
     }
 
     /* Style the table header */

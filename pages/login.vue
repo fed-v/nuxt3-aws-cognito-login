@@ -6,9 +6,13 @@
 
             <!-- You can remove 'prevent' from @submit.prevent when using Vee Validate -->
             <Form class="login-form" v-slot="{ errors }" @submit="onSubmit">
+
                 <header>
                     <h3>Welcome! Please sign in to continue</h3>
-                    <p>Don't have an account? <NuxtLink to="/signup" class="linkBtn">Create an account</NuxtLink></p>
+                    <div class="signup-link">
+                        <p>Don't have an account?</p>
+                        <NuxtLink to="/signup" class="link-btn">Create an account</NuxtLink>
+                    </div>
                 </header>
 
                 <div>
@@ -84,10 +88,11 @@
     @import '../assets/styles/less/constants.less';
     @import '../assets/styles/less/buttons.less';
     @import '../assets/styles/less/forms.less';
-
-    .forms-page {
-        font-family: 'Inter', sans-serif;
-        padding-top: 80px;
-    }
     
+    .signup-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 </style>

@@ -1,14 +1,14 @@
 <template>
     <main class="forms-page">
-
-        <aside class="empty-sideBar">&nbsp;</aside>
     
         <section class="form-section">
 
             <!-- Create New User Form -->
             <Form class="login-form" v-slot="{ errors }" @submit="onSubmit" v-if="success === false">
-                <header>
+
+                <header class="form-header">
                     <h3>Create new User</h3>
+                    <NuxtLink to="/login" class="link-btn">Back</NuxtLink>
                 </header>
                 
                 <FormsBaseInput type="email" label="email" name="email" rules="required|email" :error="{error : errors.email}" />
@@ -18,6 +18,7 @@
                 <ErrorMessage class="error-msg" name="auth" />
 
                 <button class="solid-btn" type="submit">Create account</button>
+
             </Form>
 
             <div class="success-msg" v-if="success === true">

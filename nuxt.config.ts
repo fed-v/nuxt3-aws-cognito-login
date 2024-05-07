@@ -29,7 +29,9 @@ export default defineNuxtConfig({
 
   // https://www.joshwcomeau.com/css/custom-css-reset/
   css: [
-    '@/assets/styles/reset.css'
+    '@/assets/styles/reset.css',
+    '@/assets/styles/global.css',
+
   ],
 
   alias: {

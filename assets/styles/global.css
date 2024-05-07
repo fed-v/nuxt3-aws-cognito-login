@@ -1,0 +1,16 @@
+body {
+    /*background: linear-gradient(#ADDCEE 20%, #F3F6F6);*/
+    background: #ecf0f3;
+    font-family: 'Inter', sans-serif;
+}
+
+.forms-page {
+    padding-top: 80px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+

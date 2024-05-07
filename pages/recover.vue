@@ -1,28 +1,33 @@
 <template>
     <main class="forms-page">
-
-        <aside class="empty-sideBar">&nbsp;</aside>
     
         <section class="form-section">
 
             <!-- Send Code Form -->
             <Form class="login-form" v-slot="{ errors }" @submit="onSubmit" v-if="success === false">
-                <header>
+
+                <header class="form-header">
                     <h3>Recover password</h3>
+                    <NuxtLink to="/login" class="link-btn">Back</NuxtLink>
                 </header>
+
                 <div>
                     <FormsBaseInput type="email" label="email" name="email" rules="required|email" :error="{error : errors.email}" />
 
                     <!-- This error message is in case of wrong email/password combo -->
                     <ErrorMessage class="error-msg" name="auth" />
                 </div>
+
                 <button class="solid-btn" type="submit">Submit</button>
+
             </Form>
 
             <!-- Reset Password Form -->
             <Form class="login-form" v-slot="{ errors }" @submit="onSubmit" v-if="success === true">
-                <header>
+
+                <header class="form-header">
                     <h3>Reset password</h3>
+                    <NuxtLink to="/login" class="link-btn">Back</NuxtLink>
                 </header>
                 
                 <div>
@@ -33,6 +38,7 @@
                 <FormsBaseInput type="password" label="Confirm Password" name="confirmPassword" rules="required" :error="{error : errors.confirmPassword}" />
     
                 <button class="solid-btn" type="submit" value="Submit">Submit</button>
+
             </Form>
 
         </section>
