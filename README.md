@@ -68,3 +68,29 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Docker
+
+Create and start the development container:
+
+  ```bash
+  docker compose up --build -d
+  ```
+  
+Stop and remove the development container:
+
+  ```bash
+  docker compose down
+  ```
+
+Create and start the production container:
+
+  ```bash
+  docker compose -f compose.production.yaml up --build -d
+  ```
+
+Stop and remove the production container:
+
+  ```bash
+  docker compose -f compose.production.yaml down
+  ```
