@@ -1,6 +1,6 @@
-# Nuxt 3 Cognito login using Amplify
+# Nuxt 3 Cognito login using AWS Amplify
 
-This is a simple demo that uses Amplify to create a protected application.
+This is a simple demo that uses AWS Amplify Gen 2 to create a protected application.
 
 Features include:
 

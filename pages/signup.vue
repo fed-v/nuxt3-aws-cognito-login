@@ -43,11 +43,9 @@
     // Create a dynamic ref to use as a flag. Initial value is 'false'
     const success = ref(false);
 
-
-    /*
     async function onSubmit(values, actions) {
 
-        const user = await Auth.signUp(values.email, values.password).then( () => {
+        /*const user = await Auth.signUp(values.email, values.password).then( () => {
 
             success.value = true;
 
@@ -57,9 +55,15 @@
             actions.setFieldError('auth', 'There was a problem with your request. Please try again later.');
             return null;
 
-        });
+        });*/
 
-    }*/
+
+
+
+
+        
+
+    }
 
 </script>
 
