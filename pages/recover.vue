@@ -48,19 +48,17 @@
 
 <script setup>
 
-    /*definePageMeta({
+    definePageMeta({
         middleware: ['check-login']
     });
 
-
-    import { ref } from 'vue';
-    import { Auth } from 'aws-amplify';
-
+    import { resetPassword } from "aws-amplify/auth"
 
     // Create a dynamic ref to use as a flag. Initial value is 'false'
     const success = ref(false);
 
 
+    /*
     async function onSubmit(values) {
 
         if(success.value === false) {
