@@ -3,7 +3,7 @@
 
     <header class="site-header">
         <h1>Homepage</h1>
-        <button class="solid-btn" @click="signOut">Sign out</button>
+        <button class="solid-btn" @click="callSignOut">Sign out</button>
     </header>
 
     <main class="main-content">
@@ -41,19 +41,17 @@
         middleware: ['check-auth']
     });
 
-    import { Auth } from 'aws-amplify';
+    import { signOut } from "aws-amplify/auth"
 
+    const callSignOut = async () => {
 
-    const signOut = async () => {
-
-        await Auth.signOut().then( () => {
+        await signOut().then( () => {
             navigateTo('/login');
         }).catch(error => { 
             console.log('error signing out: ', error);
         });
 
     };
-
 
     // Source: https://nuxt.com/docs/api/composables/use-fetch
     const { data } = await useFetch('api/getUserData',  {

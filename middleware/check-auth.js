@@ -1,11 +1,12 @@
-import { Auth } from 'aws-amplify';
+import { getCurrentUser } from 'aws-amplify/auth';
 
 export default defineNuxtRouteMiddleware( async (to, from) => {
 
-    try {
-      const user = await Auth.currentAuthenticatedUser();
-    } catch(error) {
-      return navigateTo('/login');
-    }
+  // Try to get the current logged in user info or redirect to login page
+  try {
+    await getCurrentUser();
+  } catch(error) {
+    return navigateTo('/login');
+  }
 
 });

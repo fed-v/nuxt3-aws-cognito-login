@@ -48,7 +48,7 @@
 
 <script setup>
 
-    definePageMeta({
+    /*definePageMeta({
         middleware: ['check-login']
     });
 
@@ -67,23 +67,14 @@
 
             success.value = true;
             
-            /*try {
-                const { data } = await Auth.forgotPassword(values.email);
-                success.value = true;
-            } catch (error) {
-                console.log(error);
-                actions.setFieldError('auth', 'There was a problem with your request. Please try again later.');
-            }*/
+           
         } else {
-            // Collect confirmation code and new password, then
-            /*Auth.forgotPasswordSubmit(username, values.code, values.newPassword)
-            .then((data) => console.log(data))
-            .catch((err) => console.log(err));*/
+            
 
             console.log("second submit");
         } 
 
-    }
+    }*/
 
 </script>
 

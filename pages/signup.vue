@@ -34,7 +34,7 @@
 
 <script setup>
 
-    definePageMeta({
+    /*definePageMeta({
         middleware: ['check-login']
     });
 
@@ -61,7 +61,7 @@
 
         });
 
-    }
+    }*/
 
 </script>
 

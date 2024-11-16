@@ -51,17 +51,19 @@
         middleware: ['check-login']
     });
 
-
-    import { Auth } from 'aws-amplify';
-
+    import { signIn } from "aws-amplify/auth"
 
     // Set the input value to the value saved in the cookie if it's set
     const emailInputValue = useCookie('email').value;
 
-
     const onSubmit = async (values, actions) => {
 
-       const user = await Auth.signIn(values.email, values.password).then( () => {
+        await signIn({
+
+            username: values.email,
+            password: values.password,
+
+        }).then( () => {
 
             // SET LOGIN COOKIE IF "REMEMBER ME" IS CHECKED
             if(values.remember === 'yes') {
